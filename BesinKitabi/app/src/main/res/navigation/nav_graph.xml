@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/besinFragment2">
+    <fragment
+        android:id="@+id/besinFragment2"
+        android:name="com.example.besinkitabi.view.BesinFragment"
+        android:label="BesinFragment"
+        tools:layout="@layout/fragment_besin">
+        <action
+            android:id="@+id/action_besinFragment2_to_besinDetailsFragment2"
+            app:destination="@id/besinDetailsFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/besinDetailsFragment2"
+        android:name="com.example.besinkitabi.view.BesinDetailsFragment"
+        android:label="fragment_besin_details"
+        tools:layout="@layout/fragment_besin_details" >
+        <argument
+            android:name="besinId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_besinDetailsFragment2_to_besinFragment2"
+            app:destination="@id/besinFragment2" />
+    </fragment>
+</navigation>
